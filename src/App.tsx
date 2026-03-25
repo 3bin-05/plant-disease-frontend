@@ -30,7 +30,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post<AnalysisResult>('https://plant-disease-backend-1-fcft.onrender.com', formData, {
+      const response = await axios.post<AnalysisResult>('https://plant-disease-backend-1-fcft.onrender.com/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
