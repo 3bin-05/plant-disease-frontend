@@ -1,7 +1,16 @@
-
+import { useState, useEffect } from 'react';
 import { Leaf } from 'lucide-react';
 
 export const AnalysisLoading: React.FC = () => {
+  const [isSlow, setIsSlow] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsSlow(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="w-full max-w-md mx-auto p-10 backdrop-blur-lg bg-white/30 rounded-3xl border border-white/40 shadow-xl flex flex-col items-center justify-center space-y-8 animate-pulse text-center">
       <div className="relative flex items-center justify-center">
@@ -13,8 +22,12 @@ export const AnalysisLoading: React.FC = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-2xl font-semibold text-gray-800 tracking-tight">Analyzing leaf...</h3>
-        <p className="text-gray-600 mt-2">Processing image and detecting anomalies</p>
+        <h3 className="text-2xl font-semibold text-gray-800 tracking-tight">
+          {isSlow ? 'Waking up server...' : 'Analyzing leaf...'}
+        </h3>
+        <p className="text-gray-600 mt-2">
+          {isSlow ? 'Render free tier may take ~50 seconds to cold start' : 'Processing image and detecting anomalies'}
+        </p>
       </div>
     </div>
   );

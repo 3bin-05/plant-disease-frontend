@@ -39,7 +39,7 @@ function App() {
       setStep('result');
     } catch (err) {
       console.error(err);
-      setError("Something went wrong analyzing the image. Please try again.");
+      setError("Something went wrong. Note: Free servers may take ~50 seconds to wake up if inactive. Please try submitting again.");
       setStep('upload');
     }
   };
