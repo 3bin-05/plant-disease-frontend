@@ -65,11 +65,11 @@ function App() {
           <div className="inline-flex items-center justify-center p-4 bg-white/40 mb-6 backdrop-blur-md rounded-full shadow-sm border border-white/50">
             <Leaf className="text-green-600 mr-2" fill="currentColor" size={32} />
             <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-emerald-900 tracking-tight">
-              LeafCare AI
+              LeafCare
             </h1>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            AI-Powered Plant Disease Detection
+            Plant Disease Detection
           </h2>
           <p className="text-lg text-gray-600 font-medium leading-relaxed">
             Upload a leaf image and get an instant diagnosis with treatment suggestions. Early detection saves yields.
@@ -101,7 +101,7 @@ function App() {
 
         {/* Footer */}
         <footer className="mt-auto text-center text-gray-500 font-medium">
-          <p>Powered by AI | Built for Farmers 🌿</p>
+          <p>Built for Farmers 🌿</p>
         </footer>
       </div>
     </div>

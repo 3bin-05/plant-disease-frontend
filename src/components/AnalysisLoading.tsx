@@ -13,7 +13,7 @@ export const AnalysisLoading: React.FC = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-2xl font-semibold text-gray-800 tracking-tight">Analyzing leaf using AI...</h3>
+        <h3 className="text-2xl font-semibold text-gray-800 tracking-tight">Analyzing leaf...</h3>
         <p className="text-gray-600 mt-2">Processing image and detecting anomalies</p>
       </div>
     </div>

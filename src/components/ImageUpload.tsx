@@ -87,12 +87,20 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ onImageSelect, onAnaly
               &times;
             </button>
           </div>
-          <button
-            onClick={onAnalyze}
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 text-white text-lg font-semibold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            Analyze Now
-          </button>
+          <div className="flex w-full gap-4">
+            <button
+              onClick={() => { setPreview(null); onImageSelect(null, ''); }}
+              className="flex-1 py-4 rounded-xl bg-white/50 hover:bg-white/80 text-gray-800 text-lg font-semibold shadow border border-gray-200 hover:shadow-md transition-all duration-300"
+            >
+              Reset Image
+            </button>
+            <button
+              onClick={onAnalyze}
+              className="flex-1 py-4 rounded-xl bg-gradient-to-r from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 text-white text-lg font-semibold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              Analyze Now
+            </button>
+          </div>
         </div>
       )}
     </div>
