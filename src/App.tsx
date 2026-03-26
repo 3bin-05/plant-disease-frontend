@@ -30,7 +30,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post<AnalysisResult>('https://plant-disease-backend-1-fcft.onrender.com/predict', formData, {
+      const response = await axios.post<AnalysisResult>('http://127.0.0.1:5000/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -39,7 +39,7 @@ function App() {
       setStep('result');
     } catch (err) {
       console.error(err);
-      setError("Something went wrong. Note: Free servers may take ~50 seconds to wake up if inactive. Please try submitting again.");
+      setError("Something went wrong analyzing the image. Please try again.");
       setStep('upload');
     }
   };
